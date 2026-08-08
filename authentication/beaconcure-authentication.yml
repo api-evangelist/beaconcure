@@ -1,0 +1,58 @@
+generated: '2026-08-06'
+method: searched
+source: https://beaconcure.com/api/
+docs: https://beaconcure.com/api/
+api: Beaconcure Verify API
+summary:
+  types:
+  - apiKey
+  - ipAllowlist
+  api_key_in:
+  - undocumented
+  oauth2_flows: []
+  note: 'Beaconcure publishes no OpenAPI, no auth reference page and no public developer
+    portal. Everything recorded here is stated in prose on the single public Verify
+    API page; the concrete mechanics (header vs query parameter, key format, rotation,
+    token lifetime) are not published anywhere a member of the public can reach.'
+schemes:
+- name: verify-api-key
+  type: apiKey
+  in: undocumented
+  parameter: undocumented
+  description: 'Beaconcure instructs prospective users to "log in with your test key
+    and data, or use the API link you received from Beaconcure''s customer success
+    team." A per-customer key is therefore issued out of band by customer success;
+    the transport location of that key is not documented publicly.'
+  sources:
+  - https://beaconcure.com/api/
+  x-evidence:
+    fetched: '2026-08-06'
+    url: https://beaconcure.com/api/
+    http_status: 200
+- name: ip-allowlist
+  type: networkControl
+  description: 'The API endpoint itself is network-restricted: "The API link has restricted
+    access to only the users on the IP whitelist provided by your organization during
+    the onboarding process." Access is therefore gated at the network layer in addition
+    to any credential.'
+  sources:
+  - https://beaconcure.com/api/
+  x-evidence:
+    fetched: '2026-08-06'
+    url: https://beaconcure.com/api/
+    http_status: 200
+issuance:
+  self_service: false
+  channel: Beaconcure customer success team
+  note: There is no public sign-up, no key-provisioning console and no sandbox a non-customer
+    can reach.
+data_isolation:
+  description: 'Beaconcure states the API reads a partial clone of the customer''s
+    data rather than the live Verify application — "it doesn''t affect your live data
+    nor does it interact with Verify''s application" — and that the API database is
+    "encrypted with rotational keys."'
+  source: https://beaconcure.com/api/
+gaps:
+- No machine-readable security scheme (no OpenAPI, Swagger, or OIDC discovery document).
+- Key transport (header name / query parameter) is not published.
+- No documented token lifetime, rotation policy for customer keys, or revocation flow.

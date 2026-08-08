@@ -1,0 +1,78 @@
+generated: '2026-08-06'
+method: searched
+source: https://beaconcure.com/api/
+api: Beaconcure Verify API
+summary: 'Cross-cutting request/response semantics for the Verify API, captured from
+  the only public page Beaconcure publishes about it. The page describes the style
+  of the API in prose; it does not enumerate endpoints, parameters, error bodies or
+  rate limits, and there is no machine-readable contract to derive them from.'
+style:
+  architecture: REST
+  url_shape: resource-oriented
+  description: '"Our API has predictable resource-oriented URLs, accepts form-encoded
+    request bodies, returns JSON-encoded responses (but also CSV, if asked), and uses
+    standard HTTP response codes, authentication, and verbs."'
+request:
+  content_type: application/x-www-form-urlencoded
+  note: Request bodies are form-encoded rather than JSON.
+response:
+  default_content_type: application/json
+  alternate_formats:
+  - text/csv
+  note: CSV is offered on request; the negotiation mechanism (Accept header vs query
+    parameter) is not documented.
+status_codes:
+  scheme: standard HTTP
+  documented: false
+  note: Beaconcure states the API "uses standard HTTP response codes" but publishes
+    no error reference, so no errors/ catalog could be derived.
+authentication:
+  see: authentication/beaconcure-authentication.yml
+  summary: Per-customer key issued by customer success, plus an IP allowlist on the
+    endpoint.
+idempotency:
+  supported: unknown
+  documented: false
+  note: 'No idempotency key, retry semantics or safe-replay contract is published.
+    Recorded deliberately as absent — no Idempotency pointer is wired for this provider.'
+pagination:
+  documented: false
+  note: No pagination style, parameters or response envelope is published.
+versioning:
+  scheme: per-customer
+  documented_policy: false
+  description: '"The Verify API is unique for each customer, as we release new endpoints
+    and tailor functionality according to your organization''s needs" and "each organization
+    receives a unique API version." There is no shared public version identifier, no
+    version-in-path convention published, and no cross-customer changelog.'
+  see: lifecycle/beaconcure-lifecycle.yml
+rate_limits:
+  documented: false
+metadata:
+  documented: false
+request_tracing:
+  documented: false
+data_surface:
+  description: 'Documented data available through the API, per the public page.'
+  entities:
+  - deliverables
+  - projects
+  - protocols
+  - users
+  - files
+  - QC analysis results
+  - suspected files/tables/figures
+  - verified files/tables/figures
+  - discrepancies
+  freshness: near real-time
+  backing_store: a partial clone of the customer's data, encrypted with rotational
+    keys
+gaps:
+- No OpenAPI, Swagger, GraphQL SDL, AsyncAPI or Postman collection is published.
+- Endpoint paths, parameters, response schemas and error bodies are all customer-scoped
+  and delivered out of band.
+- No public sandbox, console, or self-service key.
+x-evidence:
+- fetched: '2026-08-06'
+  url: https://beaconcure.com/api/
+  http_status: 200

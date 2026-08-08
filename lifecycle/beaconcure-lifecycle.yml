@@ -1,0 +1,42 @@
+generated: '2026-08-06'
+method: searched
+source: https://beaconcure.com/api/
+api: Beaconcure Verify API
+versioning:
+  scheme: per-customer
+  current: null
+  docs: https://beaconcure.com/api/
+  description: 'Beaconcure states that "each organization receives a unique API version"
+    and that "we release new endpoints and tailor functionality according to your organization''s
+    needs." There is no single public version identifier for the Verify API, and no
+    published convention for how versions are named or addressed.'
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: No deprecation or sunset policy is published; RFC 8594 Sunset/Deprecation header
+    support is not stated either way.
+sla:
+  url: null
+  uptime_target: null
+  note: No public SLA or uptime commitment.
+status_page: null
+status_page_probes:
+- url: https://status.beaconcure.com
+  result: NXDOMAIN
+  checked: '2026-08-06'
+changelog: null
+changelog_note: No dated public changelog for the API. Company news is published as
+  press posts at https://beaconcure.com/media-news/ and long-form material at https://beaconcure.com/resources/,
+  neither of which tracks API changes.
+deprecated_operations: []
+gaps:
+- No status page, SLA, deprecation policy, or API changelog is published.
+- Because each customer runs a distinct API version, no cross-customer lifecycle contract
+  exists publicly.
+x-evidence:
+- fetched: '2026-08-06'
+  url: https://beaconcure.com/api/
+  http_status: 200
+- fetched: '2026-08-06'
+  url: https://beaconcure.com/sitemap.xml
+  http_status: 200

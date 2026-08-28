@@ -12,6 +12,17 @@ description: 'Beaconcure is a clinical data technology company whose AI-enabled 
   though each customer receives a unique API version and endpoint behind an IP allowlist.
   Founded in Israel with US headquarters in Boston, the company works with top-10
   pharmaceutical companies and contract research organizations.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://beaconcure.com/wp-content/uploads/2025/06/Artboard-1-copy-e1749721689852.png
 url: https://raw.githubusercontent.com/api-evangelist/beaconcure/refs/heads/main/apis.yml
 x-type: company

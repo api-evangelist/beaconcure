@@ -64,5 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Beaconcure is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Beaconcure is a clinical data technology company whose AI-enabled platform, Verify, automates the statistical analysis and reporting workflow for biometrics teams running clinical trials. Verify converts static Tables, Listings and Figures (TLFs) into machine-readable form and runs format, reference, within-table and cross-table validation checks, tracks quality-control progress in a shared review workspace, and captures every fix in an inspection-ready audit trail across its Essentials, Validate and Generate modules. Beaconcure also documents a customer-scoped Verify REST API that exposes near real-time QC data — deliverables, projects, protocols, users, files, suspected and verified outputs, and discrepancies — as JSON or CSV, though each customer receives a unique API version and endpoint behind an IP allowlist. Founded in Israel with US headquarters in Boston, the company works with top-10 pharmaceutical companies and contract research organizations.
+
+**Areas:** Company · Clinical Trials · Clinical Data · Life Sciences · Pharmaceuticals · Data Validation · Quality Control · Artificial Intelligence · Biometrics · Healthcare
+
+## Beaconcure on APIs.io
+
+Everything profiled for Beaconcure is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/beaconcure/](https://apis.io/providers/beaconcure/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Beaconcure Verify API](https://apis.io/apis/beaconcure/beaconcure-verify-api/) — A REST API over Verify's near real-time quality-control data. Beaconcure documents it as resource-oriented, accepting form-encoded request bodies and…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Beaconcure Authentication](https://apis.io/security/beaconcure/beaconcure-authentication/)
+- [Beaconcure Domain Security](https://apis.io/security/beaconcure/beaconcure-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://beaconcure.com/)
+- [Documentation](https://beaconcure.com/api/)
+- [Support](https://beaconcure.com/contact-us/)
+- [Blog](https://beaconcure.com/resources/)
+- [Terms of service](https://beaconcure.com/terms-of-use/)
+- [Privacy policy](https://beaconcure.com/privacy-policy/)
+- [GitHub](https://github.com/Beaconcure-Inc)
+
+## API Evangelist rating
+
+**Kin Score 16.3** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 21.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.3** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/beaconcure/](https://apis.io/providers/beaconcure/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Beaconcure: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/beaconcure/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
